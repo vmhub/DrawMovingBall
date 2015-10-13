@@ -14,8 +14,6 @@ public class Ball extends AppCompatActivity {
     private CreateImage scene;
     private int start_x ;
     private int start_y ;
-//    private int getx;
-//    private int gety;
     public static final String PREFSZ = "BallPrefz";
 
     @Override
