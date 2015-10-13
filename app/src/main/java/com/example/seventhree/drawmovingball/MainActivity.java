@@ -12,12 +12,12 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
-
+private Spinner dropdown;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
-        Spinner dropdown = (Spinner)findViewById(R.id.color);
+        dropdown = (Spinner)findViewById(R.id.color);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.colorNames, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         EditText dx = (EditText)findViewById(R.id.dxInput);
         EditText dy = (EditText)findViewById(R.id.dyInput);
         EditText framerate = (EditText)findViewById(R.id.frameInput);
-        Spinner dropdown = (Spinner)findViewById(R.id.color);
+      //  Spinner dropdown = (Spinner)findViewById(R.id.color);
         int x,y,frame;
         SharedPreferences mPrefs = getSharedPreferences("Values", 0);
         SharedPreferences.Editor ed = mPrefs.edit();
