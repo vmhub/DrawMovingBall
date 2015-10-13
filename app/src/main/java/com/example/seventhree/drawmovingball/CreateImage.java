@@ -6,7 +6,9 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Point;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 
 /**
@@ -65,9 +67,10 @@ public class CreateImage extends View {
         scene_width =this.getWidth();
         scene_height = this.getHeight();
         sceneCanvas.drawRect(45,45,scene_width-45,scene_height-45,createRekt);
-        sceneCanvas.drawBitmap(pic,x,y,null);
+        sceneCanvas.drawBitmap(pic, x, y, null);
         x += dx;
         y += dy;
+
 
         if ((x > (scene_width-45) - pic_w) || (x <45)) {
             dx = dx*-1;
@@ -83,6 +86,11 @@ public class CreateImage extends View {
     }
 
 
+
+    public Point[] getXY() {
+       Point[]  arr={new Point(x,y),new Point(dx,dy)};
+       return arr;
+    }
 
 
 
